@@ -25,7 +25,7 @@ server = app.server
 #     return pd.read_csv(DATA_PATH.joinpath(data_file))
 
 #Load the CSV data into a Pandas DataFrame
-df = pd.read_csv('assets/Elections.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Vizz03/zim-elections-dashboard/main/Elections.csv')
 
 # df = load_data('Elections.csv')
 

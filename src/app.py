@@ -25,7 +25,7 @@ server = app.server
 #     return pd.read_csv(DATA_PATH.joinpath(data_file))
 
 #Load the CSV data into a Pandas DataFrame
-df = pd.read_csv('Elections.csv')
+df = pd.read_csv('assets/Elections.csv')
 
 # df = load_data('Elections.csv')
 
@@ -173,4 +173,4 @@ def update_word_cloud_graph_and_table(start_date, end_date):
 
 # Run the Dash application
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port= 8060)

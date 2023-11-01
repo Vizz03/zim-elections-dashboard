@@ -16,18 +16,18 @@ app = Dash(__name__, title="ZimElectionsApp")
 # Declare server for Heroku deployment. Needed for Procfile.
 server = app.server
 
-def load_data(data_file: str) -> pd.DataFrame:
-    '''
-    Load data from /data directory
-    '''
-    PATH = pathlib.Path(__file__).parent
-    DATA_PATH = PATH.joinpath("data").resolve()
-    return pd.read_csv(DATA_PATH.joinpath(data_file))
+# def load_data(data_file: str) -> pd.DataFrame:
+#     '''
+#     Load data from /data directory
+#     '''
+#     PATH = pathlib.Path(__file__).parent
+#     DATA_PATH = PATH.joinpath("data").resolve()
+#     return pd.read_csv(DATA_PATH.joinpath(data_file))
 
-# Load the CSV data into a Pandas DataFrame
-# df = pd.read_csv('Elections.csv')
+#Load the CSV data into a Pandas DataFrame
+df = pd.read_csv('Elections.csv')
 
-df = load_data('Elections.csv')
+# df = load_data('Elections.csv')
 
 # Convert the 'Timestamp' column to datetime
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
